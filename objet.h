@@ -3,6 +3,5 @@
 
 class Objet{
     private :
-        
     public :
 } ;

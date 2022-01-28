@@ -12,9 +12,11 @@ Game::Game()
 void Game::play () {
   
     while (true) {
-        init_Grille();
-        mechant.add_to_grille(grille);
-
+        _grille.init_Grille();
+        _mechant.add_to_grille(_grille);
+        _perso.add_to_grille(_grille);
+        _grille.draw_Grille();
+        sleepOneLap();
 
 // mouvement du méchant
 
