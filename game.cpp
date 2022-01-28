@@ -1,32 +1,27 @@
 #include <iostream>
 #include "game.h"
 #include <array>
-#include "keyboard-event.h"
+#include "keyboard_event.h"
+#include "mechant.h"
+#include "grille.h"
 
-Game::Game(int width, int length, int delay)
-  : playboard(width, length),
-    snake(width, length),
-    delay(delay)
+Game::Game(Grille grille, Mechant Mechant, int delay)
+  : Grille(grille),
+  Mechant(Mechant),
+  delay(delay)
 {}
 
 void Game::play () {
-  // le jeu est une boucle sans fin qu'on temporise de 'delay' ms
-  // entre deux mouvements du serpent (on règle comme cela la vitesse
-  // du serpent)
 
-  // la clé entrée au clavier pour donner la direction du serpent ou
-  // quitter le jeu (ou ce que vous voulez)
   char key = 'j'; // à gauche au début
 
-  // par exemple, j'indique le mouvement du serpent par son décalage
-  // en x (1 vers la droite et -1 vers la gauche)
   int dx {-1};
   int dy {0};
   
   while (true) {
-    playboard.clear();
-    snake.addToPlayboard(playboard);
-    playboard.draw();
+    grille.clear();
+    mechant.addToPlayboard(playboard);
+    grille.draw_playground();
     sleepOneLap();
 
     if (keyEvent()) {
