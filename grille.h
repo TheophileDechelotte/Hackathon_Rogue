@@ -3,13 +3,13 @@
 
 class Grille {
     
-    const std::vector <std::vector <char> > playground;
+    const std::vector <std::vector <char> > grille;
     
     public : 
 
-    Grille(const std::vector <std::vector <char> > playground) ;
+    Grille(const std::vector <std::vector <char> > grille) ;
 
-    void draw_Playground() ;
+    void draw_Grille() ;
 
     void vertical_Walls() ;
 

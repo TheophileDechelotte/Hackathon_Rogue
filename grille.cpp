@@ -67,6 +67,32 @@ void Grille::Corridor() {
 }
 
 
+void Grille::Ground() {
+    """
+    Fonction permettant d'ajouter à la grille le sol
+    """
+
+    for (int i=1 ; i<grille.size()-1 ; i++){
+        for (int j=1 ; j<int(grille[1].size()/3)-1 : j++) {
+            grille[i][j] = GROUND ;
+        }
+        for (int j=int(2*grille[1].size()/3)+1 ; j<grille[1].size()-1 : j++) {
+            grille[i][j] = GROUND ;
+        }
+    }
+}
+
+
+
+void Grille::init_Grille() {
+    std::vector <std::vector <char> > grille (LINES, std::vector <char> (COLUMNS,BACKGROUND));
+    grille.Ground();
+    grille.vertical_Walls();
+    grille.horizontal_Walls();
+    grille.Corridor();
+}
+
+
 
 
 
