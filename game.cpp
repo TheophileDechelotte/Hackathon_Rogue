@@ -20,13 +20,13 @@ void Game::play () {
 
 // mouvement du méchant
 
-
+    char key;
 // mouvement du héros
         if (keyEvent()) {
             std::cin >> key;
 
             if (key == 'q') { // on quite la partie
-	            init_Grille();
+	            _grille.init_Grille();
 	            std::cout << "see you soon la zone" << std::endl;
 	            exit(1);
             } 
@@ -34,8 +34,8 @@ void Game::play () {
             _perso.marche(key);
         }
 
-        _perso.add_to_grille(grille);
-        _grille.draw_playground();
+        _perso.add_to_grille(_grille);
+        _grille.draw_Grille();
         sleepOneLap();
     }
 }
