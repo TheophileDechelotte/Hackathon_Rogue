@@ -6,6 +6,8 @@
 #include "grille.h"
 #include "perso.h"
 
+
+
 Game::Game()
 {}
 
@@ -37,5 +39,14 @@ void Game::play () {
         _perso.add_to_grille(_grille);
         _grille.draw_Grille();
         sleepOneLap();
+    }
+}
+
+void Game::sleepOneLap() {
+  clock_t end;
+   end = clock() + _delay * CLOCKS_PER_SEC / 1000;
+  while (clock() < end)
+    {
+      // wait i.e. do nothing
     }
 }
