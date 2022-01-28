@@ -24,11 +24,28 @@ void Grille::draw_Grille() {
     // Fonction permettant d'afficher la grille que l'on a construit
     for (int i=0 ; i<grille.size() ; i++) {
         for (int j=0 ; j<grille[1].size() ; j++) {
-            std::cout << grille[i][j];
+            int id = grille[i][j]
+            if (id == 1){
+                std::cout << " " ;
+            }
+            else if (id == 2){
+                std::cout << "." ;
+            }
+            else if (id == 3){
+                std::cout << "|" ;
+            }
+            else if (id == 4){
+                std::cout << "_" ;
+            }
+            else if (id == 5){
+                std::cout << "#" ;
+            }
         }
         std::cout << std::endl;
     }
 }
+
+
 
 void Grille::vertical_Walls() {
     // Fonction permettant d'ajouter à la grille les murs verticaux
@@ -60,7 +77,7 @@ void Grille::Corridor() {
     // Fonction permettant d'ajouter à la grille le couloir
 
     for (int j=int(grille[1].size()/3) ; j<int(2*grille[1].size()/3) ; j++) {
-        grille[int(grille.size()/2)][j] ;
+        grille[int(grille.size()/2)][j] = CORRIDOR ;
     }
 }
 
