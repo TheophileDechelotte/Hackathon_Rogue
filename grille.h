@@ -25,4 +25,6 @@ class Grille {
 
     void set_Pixel(int x, int y, char c) ;
 
+    int at(int a, int b);
+
 } ;
