@@ -11,8 +11,11 @@ const char CORRIDOR = '#';
 const char DOOR = '+';
 
 
-Grille::Grille(const std::vector <std::vector <char> > grille) :
-grille(grille)
+//Grille::Grille(const std::vector <std::vector <char> > grille) :
+//grille(grille)
+//{}
+
+Grille::Grille()
 {}
 
 void Grille::draw_Grille() {

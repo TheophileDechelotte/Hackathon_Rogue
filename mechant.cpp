@@ -1,13 +1,16 @@
-# pragma once
 # include "mechant.h"
 # include "grille.h"
 # include <cstdlib>
 
-Mechant::Mechant(char nom, int x, int y) :
-    nom (nom) ,
-    x (x), 
-    y(y)
-    {}
+//Mechant::Mechant(char nom, int x, int y) :
+//    nom ("Osef") ,
+//    symbole ('K')
+//    x (x), 
+//    y(y)
+//    {}
+
+Mechant::Mechant()
+{}
 
 void Mechant::se_deplace(int dx, int dy){
     // on entre soit dx soit dy 
@@ -44,5 +47,5 @@ void Mechant::pas_alea(Grille& grille){
 }
 
 void Mechant::add_to_grille(Grille& grille){
-    grille.set_Pixel(x,y,nom) ;
+    grille.set_Pixel(x,y,symbole) ;
 }

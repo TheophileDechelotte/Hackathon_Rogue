@@ -4,12 +4,13 @@
 class Perso{
     private :
         std::string nom ;
-        char symbole
+        char symbole ;
         int x ;
         int y ;
         bool key ;
     public :
-        Perso(int x, int y) ;
+        //Perso(int x, int y) ;
+        Perso() ;
+        void add_to_grille(Grille& grille) ;
         void attrape_cle() ; 
-        void add_to_grille() ;
 } ;

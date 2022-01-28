@@ -1,12 +1,13 @@
 #include <iostream>
 #include "game.h"
 #include <array>
-#include "keyboard_event.h"
+#include "key_event.h"
 #include "mechant.h"
 #include "grille.h"
 #include "perso.h"
 
-Game::Game(int delay) : delay(200) {}
+Game::Game()
+{}
 
 void Game::play () {
 

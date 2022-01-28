@@ -13,7 +13,7 @@ class Game
     int _delay;
   
 public:
-  Game (int delay=200);
+  Game ();
   void play ();
   void sleepOneLap ();
 };

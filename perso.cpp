@@ -1,13 +1,19 @@
 # include "perso.h"
-#include "grille.h"
+# include "grille.h"
 
-    Perso(int x, int y) : 
-    nom ("Maelle")
-    symbole ('@')
-    x(x), 
-    y(y) 
+//    Perso (int x, int y) :
+ //   nom ("Maelle") ,
+ //   symbole ('@') ,
+   // x (x) ,
+    //y (y) 
+   // {}
+
+Perso::Perso()
     {}
 
-    void attrape_cle() {}
 
-    void add_to_grille(Grille Grille) {}
+    void add_to_grille(Grille& grille) {
+        grille.set_Pixel(x,y,symbole) ;
+    }
+
+     void attrape_cle() {}

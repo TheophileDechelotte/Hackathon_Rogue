@@ -1,3 +1,4 @@
+# pragma once
 #include <iostream>
 #include <vector>
 
@@ -7,7 +8,8 @@ class Grille {
     
     public : 
 
-    Grille(const std::vector <std::vector <char> > grille) ;
+    //Grille(const std::vector <std::vector <char> > grille) ;
+   Grille() ;
 
     void draw_Grille() ;
 
