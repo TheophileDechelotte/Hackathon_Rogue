@@ -5,58 +5,46 @@
 #include "mechant.h"
 #include "grille.h"
 
-Game::Game(Grille grille, Mechant Mechant, Perso Perso, int delay)
-  : Grille(grille),
-  Mechant(Mechant),
-  Perso(Perso),
-  delay(delay)
-{}
+Game::Game(int delay) : delay(200) {}
 
 void Game::play () {
 
-  char key = 'j'; // à gauche au début
+    char key = 'j'; // à gauche au début
 
-  int dx {-1};
-  int dy {0};
+    int dx {-1};
+    int dy {0};
   
-  while (true) {
-    grille.clear();
-    mechant.add_to_grille();
-    grille.draw_playground();
-    perso.add_to_grille(grille);
-    grille.draw_playground();
-    sleepOneLap();
+    while (true) {
+        grille.init();
+        mechant.add_to_grille();
+        perso.add_to_grille();
+        grille.draw_playground();
+        sleepOneLap();
+
+// mouvement du méchant
 
 
 // mouvement du héros
-    if (keyEvent()) {
-      std::cin >> key;
+        if (keyEvent()) {
+            std::cin >> key;
       // la clé key a été pressée
-      if (key == 'l'){ // on veut aller à droite
-	dx = 0; 
-  dy = 1;}
-      else if (key == 'j') { // on veut aller à gauche
-	dx = -1; 
-  dy = 0;}
-      else if (key == 'i'){ // on veut aller en haut
-	dy = 0;
-  dx = -1; }
-      else if (key == 'k'){ // on veut aller en bas
-	dy = 1; 
-  dx = 0;}
-      else if (key == 'q') { // on quite la partie
-	playboard.clear();
-	std::cout << "see you soon little snake" << std::endl;
-	exit(1);
-      } else {
-	// pas de clé (encore) connue: vous pouvez en rajouter pour de
-	// nouveaux traitements
-      }
+            if (key == 'l'){ // on veut aller à droite
+	            dx = 0; 
+                dy = 1;}
+            else if (key == 'j') { // on veut aller à gauche
+	            dx = -1; 
+                dy = 0;}
+            else if (key == 'i'){ // on veut aller en haut
+	            dy = 0;
+                dx = -1; }
+            else if (key == 'k'){ // on veut aller en bas
+	            dy = 1; 
+                dx = 0;}
+            else if (key == 'q') { // on quite la partie
+	        playboard.init();
+	        std::cout << "see you soon la zone" << std::endl;
+	        exit(1);
+            } 
+        }
     }
-    // le serpent est entré dans un des murs
-    if (not snake.goodMove(playboard, dx, dy)) {
-      std::cout << "game over" << std::endl;
-      exit(2);
-    }
-  }
 }
