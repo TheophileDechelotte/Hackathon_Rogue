@@ -86,9 +86,9 @@ void Grille::init_Grille() {
 }
 
 
-
-
-
+int at(int a, int b){
+    return grille[a][b];
+}
 
 
 
