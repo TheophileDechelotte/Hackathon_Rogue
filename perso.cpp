@@ -6,6 +6,13 @@
 Perso::Perso()
     {}
 
+void Perso::init_perso(int x, int y){
+    x = x ;
+    y = y ;
+    symbole = 6 ;
+    key = 0 ;
+}
+
 
 void Perso::add_to_grille(Grille& grille) {
     grille.set_Pixel(x,y,symbole) ;

@@ -11,6 +11,14 @@
 Game::Game()
 {}
 
+void Game::init_game(Grille grille, Mechant mechant, Perso perso, int delay){
+    _grille =grille ;
+    _mechant = mechant ;
+    _perso = perso ;
+    _delay = delay ;
+}
+
+
 void Game::play () {
   
     while (true) {
