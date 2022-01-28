@@ -47,6 +47,7 @@ void Mechant::pas_alea(Grille& grille){
             this->se_deplace(0,-1) ;
         }
     }
+
 }
 
 void Mechant::add_to_grille(Grille& grille){

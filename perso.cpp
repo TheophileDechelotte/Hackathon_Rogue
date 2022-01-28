@@ -42,4 +42,10 @@ void Perso::marche(char dir, Grille& grille){
             y = y-1;
         }
     }
+    
+}
+
+
+int Perso::vie(){
+    return vie;
 }
