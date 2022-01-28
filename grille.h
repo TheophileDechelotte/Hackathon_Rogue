@@ -21,5 +21,4 @@ class Grille {
 
     void set_Pixel(int x, int y, char c) ;
 
-
 } ;

@@ -16,9 +16,9 @@ void Game::play () {
     int dy {0};
   
     while (true) {
-        grille.init();
-        mechant.add_to_grille();
-        perso.add_to_grille();
+        init_Grille();
+        mechant.add_to_grille(grille);
+        perso.add_to_grille(grille);
         grille.draw_playground();
         sleepOneLap();
 
@@ -42,7 +42,7 @@ void Game::play () {
 	            dy = 1; 
                 dx = 0;}
             else if (key == 'q') { // on quite la partie
-	        playboard.init();
+	        init_Grille();
 	        std::cout << "see you soon la zone" << std::endl;
 	        exit(1);
             } 

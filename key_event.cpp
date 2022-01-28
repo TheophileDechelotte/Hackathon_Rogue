@@ -3,6 +3,7 @@
 #include <termios.h>
 #include <cstdio>
 #include <ctime>
+#include "key_event.h"
 
 static const int STDIN = 0;
 static bool initialized = false;
