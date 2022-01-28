@@ -31,6 +31,19 @@ void Grille::vertical_Walls() {
     Fonction permettant d'ajouter à la grille les murs verticaux
     """
     
+    for (int i=1 ; i<playground.size() ; i++) {
+        playground[i][0] = '|';
+        playground[i][int(playground[1].size()/3)] = '|';
+        playground[i][int(2*playground[1].size()/3)] = '|';
+        playground[i][playground[1].size()-1] = '|';
+    }
+}
+
+void Grille::horizontal_Walls() {
+    """
+    Fonction permettant d'ajouter à la grille les murs horizontaux
+    """
+    
     for (int j=0 ; j<int(playground[1].size()/3) ; j++) {
         playground[0][j] = '_';
         playground[playground.size()-1][j] = '_';
@@ -42,27 +55,15 @@ void Grille::vertical_Walls() {
     }
 }
 
-void Grille::horizontal_Walls() {
-    """
-    Fonction permettant d'ajouter à la grille les murs horizontaux
-    """
-    
-    for (int i=1 ; i<playground.size() ; i++) {
-        playground[i][0] = '|';
-        playground[i][int(playground[1].size()/3)] = '|';
-        playground[i][int(2*playground[1].size()/3)] = '|';
-        playground[i][playground[1].size()-1] = '|';
-    }
-}
-
 void Grille::Corridor() {
 
 
-    for (int i=int(playground.size()/3) ; i<int(2*playground.size()/3) ; i++) {
-        
+    for (int j=int(playground[1].size()/3) ; j<int(2*playground[1].size()/3) ; j++) {
+        playground[int(playground.size()/2)][j] ;
     }
-
 }
+
+
 
 
 
