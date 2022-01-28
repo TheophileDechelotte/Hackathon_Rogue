@@ -22,16 +22,16 @@ void attrape_cle() {}
 
 
 void Perso::marche(char dir){
-    if(dir == 'j'){
+    if(dir == 'i'){
         x++;
     }
-    if(dir == 'l'){
+    if(dir == 'k'){
         x = x-1;
     }
-    if(dir == 'i'){
+    if(dir == 'j'){
         y++;
     }
-    if(dir == 'k'){
+    if(dir == 'l'){
         y = y-1;
     }
 }
