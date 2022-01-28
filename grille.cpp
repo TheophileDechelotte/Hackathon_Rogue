@@ -87,7 +87,7 @@ void Grille::init_Grille() {
     this->Corridor();
 }
 
-void set_Pixel(int x, int y, int c) {
+void Grille::set_Pixel(int x, int y, int c) {
     grille[x][y] = c ;
 }
 

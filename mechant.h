@@ -6,7 +6,7 @@
 class Mechant{
     private :
         std::string nom ;
-        char symbole ;
+        int symbole ;
         int x ;
         int y ;
     public :
