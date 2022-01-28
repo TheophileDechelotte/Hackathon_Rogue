@@ -6,9 +6,9 @@
 Perso::Perso()
     {}
 
-void Perso::init_perso(int x, int y){
-    x = x ;
-    y = y ;
+void Perso::init_perso(int a, int b){
+    x = a ;
+    y = b ;
     symbole = 6 ;
     key = 0 ;
 }
