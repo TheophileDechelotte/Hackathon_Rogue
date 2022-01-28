@@ -9,15 +9,17 @@ class Grille {
 
     Grille(const std::vector <std::vector <char> > playground) ;
 
-    void draw_Playground(const std::vector <std::vector <char> > & playground) ;
+    void draw_Playground() ;
 
-    void vertical_Walls(const std::vector <std::vector <char> > & playground) ;
+    void vertical_Walls() ;
 
-    void horizontal_Walls(const std::vector <std::vector <char> > & playground) ;
+    void horizontal_Walls() ;
 
-    void Corridor(const std::vector <std::vector <char> > & playground) ;
+    void Corridor() ;
 
-    void Doors(const std::vector <std::vector <char> > & playground) ;
+    void Doors() ;
+
+    void set_Pixel(int x, int y, char c) ;
 
 
 } ;
