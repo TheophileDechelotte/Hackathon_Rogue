@@ -5,13 +5,13 @@
 
 const int LINES = 10;
 const int COLUMNS = 30;
-const char BACKGROUND = ' ' ;
-const char GROUND = '.';
-const char CORRIDOR = '#';
-const char DOOR = '+';
+const int BACKGROUND = 1 ;
+const int GROUND = 2 ;
+const int CORRIDOR = 3 ;
+const int DOOR = 4 ;
 
 
-//Grille::Grille(const std::vector <std::vector <char> > grille) :
+//Grille::Grille(const std::vector <std::vector <int> > grille) :
 //grille(grille)
 //{}
 
@@ -78,7 +78,7 @@ void Grille::Ground() {
 
 void Grille::init_Grille() {
     // Fonction permettant de reinitialiser/initialiser la grille en ne construisant que le background, le ground, les murs, et le couloir
-    grille = std::vector<std::vector<char>> (LINES, std::vector <char> (COLUMNS,BACKGROUND)) ;
+    grille = std::vector<std::vector<int>> (LINES, std::vector <int> (COLUMNS,BACKGROUND)) ;
     this->Ground();
     this->vertical_Walls();
     this->horizontal_Walls();
