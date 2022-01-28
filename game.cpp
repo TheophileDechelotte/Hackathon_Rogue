@@ -12,7 +12,7 @@ Game::Game()
 {}
 
 void Game::init_game(Grille grille, Mechant mechant, Perso perso, int delay){
-    _grille =grille ;
+    _grille = grille ;
     _mechant = mechant ;
     _perso = perso ;
     _delay = delay ;
@@ -27,15 +27,17 @@ void Game::play () {
         sleepOneLap();
 
     // mouvement du méchant
+    _mechant.pas_alea(_grille) ;
+
 
     char key;
     // mouvement du héros
         if (keyEvent()) {
             std::cin >> key;
 
-            if (key == 'q') { // on quite la partie
+            if (key == 'q') { // on quitte la partie
 	            _grille.init_Grille();
-	            std::cout << "see you soon la zone" << std::endl;
+	            std::cout << std::endl << "see you soon la zone" << std::endl;
 	            exit(1);
             } 
 
