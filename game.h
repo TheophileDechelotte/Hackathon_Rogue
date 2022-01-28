@@ -10,7 +10,7 @@ class Game
   int delay;
   
 public:
-  Game (Grille grille, Mechant Mechant, int delay=200);
+  Game (Grille grille, Mechant Mechant, Perso Perso, int delay=200);
   void play ();
   void sleepOneLap ();
 };
