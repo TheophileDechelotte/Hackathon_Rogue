@@ -14,6 +14,7 @@ class Game
   
 public:
   Game ();
+  void init_game(Grille grille, Mechant mechant, Perso perso, int delay) ;
   void play ();
   void sleepOneLap ();
 };
