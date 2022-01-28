@@ -1,16 +1,16 @@
 #pragma once
 
-#include "playboard.h"
-#include "snake.h"
+#include "grille.h"
+#include "mechant.h"
 
 class Game
 {
-  Playboard playboard;
-  Snake snake;
+  Grille Grille;
+  Mechant Mechant;
   int delay;
   
 public:
-  Game (int size, int h, int delay=200);
+  Game (Grille grille, Mechant Mechant, int delay=200);
   void play ();
   void sleepOneLap ();
 };
