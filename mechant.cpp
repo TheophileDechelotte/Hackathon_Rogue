@@ -1,5 +1,6 @@
 # pragma once
 # include "mechant.h"
+# include "grille.h"
 # include <cstdlib>
 
 Mechant::Mechant(std::string nom, int x, int y) :
@@ -33,4 +34,8 @@ void Mechant::pas_alea(){
     if (alea == 3){
         this->se_deplace(0,1) ;
     }
+}
+
+void Mechant::add_to_grille(Grille& grille){
+    grille.set_Pixel(x,y,nom) ;
 }
