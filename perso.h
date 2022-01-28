@@ -5,6 +5,6 @@ class Perso{
         bool key ;
     public :
         Perso(int x, int y) ;
-        void get_key() ;
+        void attrape_cle() ; 
         void add_to_grille() ;
 } ;

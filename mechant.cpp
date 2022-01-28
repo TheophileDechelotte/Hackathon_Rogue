@@ -3,7 +3,7 @@
 # include "grille.h"
 # include <cstdlib>
 
-Mechant::Mechant(std::string nom, int x, int y) :
+Mechant::Mechant(char nom, int x, int y) :
     nom (nom) ,
     x (x), 
     y(y)
@@ -23,15 +23,19 @@ void Mechant::se_deplace(int dx, int dy){
 void Mechant::pas_alea(){
     int alea = rand() % 4 ;
     if (alea == 0){
+        // droite
         this->se_deplace(1,0) ;
     }
     if (alea == 1){
+        // bas
         this->se_deplace(0,-1) ;
     }
     if (alea == 2){
+        // gauche
         this->se_deplace(-1,0) ;
     }
     if (alea == 3){
+        // haut
         this->se_deplace(0,1) ;
     }
 }

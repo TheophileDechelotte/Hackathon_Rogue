@@ -11,5 +11,6 @@ class Mechant{
         void se_deplace(int dx,int dy) ;
         void pas_alea() ;
         void add_to_grille(Grille& grille) ;
+        void est_bloque(Grille& grille) ;
 
 } ;
