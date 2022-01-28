@@ -17,10 +17,10 @@ void Game::play () {
     int dy {0};
   
     while (true) {
-        init_Grille();
-        mechant.add_to_grille(grille);
-        perso.add_to_grille(grille);
-        grille.draw_playground();
+        _grille.init_Grille();
+        _mechant.add_to_grille(_grille);
+        _perso.add_to_grille(_grille);
+        _grille.draw_Grille();
         sleepOneLap();
 
 // mouvement du méchant
@@ -43,7 +43,7 @@ void Game::play () {
 	            dy = 1; 
                 dx = 0;}
             else if (key == 'q') { // on quite la partie
-	        init_Grille();
+	        _grille.init_Grille();
 	        std::cout << "see you soon la zone" << std::endl;
 	        exit(1);
             } 
