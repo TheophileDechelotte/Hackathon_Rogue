@@ -14,7 +14,7 @@ Grille::Grille(const std::vector <std::vector <char> > playground) :
 playground(playground)
 {}
 
-void Grille::draw_Playground(const std::vector <std::vector <char> > & playground) {
+void Grille::draw_Playground() {
     """
     Fonction permettant d'afficher la grille que l'on a construit
     """
@@ -26,7 +26,7 @@ void Grille::draw_Playground(const std::vector <std::vector <char> > & playgroun
     }
 }
 
-void Grille::vertical_Walls(const std::vector <std::vector <char> > & playground) {
+void Grille::vertical_Walls() {
     """
     Fonction permettant d'ajouter à la grille les murs verticaux
     """
@@ -42,18 +42,28 @@ void Grille::vertical_Walls(const std::vector <std::vector <char> > & playground
     }
 }
 
-void Grille::horizontal_Walls(const std::vector <std::vector <char> > & playground) {
+void Grille::horizontal_Walls() {
     """
     Fonction permettant d'ajouter à la grille les murs horizontaux
     """
     
     for (int i=1 ; i<playground.size() ; i++) {
         playground[i][0] = '|';
-        playground[i][playground[1].size()/3] = '|';
-        playground[i][2*playground[1].size()/3] = '|';
+        playground[i][int(playground[1].size()/3)] = '|';
+        playground[i][int(2*playground[1].size()/3)] = '|';
         playground[i][playground[1].size()-1] = '|';
     }
 }
+
+void Grille::Corridor() {
+
+
+    for (int i=int(playground.size()/3) ; i<int(2*playground.size()/3) ; i++) {
+        
+    }
+
+}
+
 
 
 
