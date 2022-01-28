@@ -24,14 +24,12 @@ void Game::play () {
     while (true) {
         _grille.init_Grille();
         _mechant.add_to_grille(_grille);
-        _perso.add_to_grille(_grille);
-        _grille.draw_Grille();
         sleepOneLap();
 
-// mouvement du méchant
+    // mouvement du méchant
 
     char key;
-// mouvement du héros
+    // mouvement du héros
         if (keyEvent()) {
             std::cin >> key;
 
@@ -49,6 +47,8 @@ void Game::play () {
         sleepOneLap();
     }
 }
+
+
 
 void Game::sleepOneLap() {
   clock_t end;
