@@ -12,5 +12,6 @@ class Perso{
         //Perso(int x, int y) ;
         Perso() ;
         void add_to_grille(Grille& grille) ;
+        void marche(char dir);
         void attrape_cle() ; 
 } ;
