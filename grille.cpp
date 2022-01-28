@@ -18,6 +18,7 @@ const int HORIZONTAL_WALL = 4 ;
 //grille(grille)
 //{}
 
+
 Grille::Grille()
 {}
 
