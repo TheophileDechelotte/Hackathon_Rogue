@@ -14,7 +14,7 @@ int main(){
 
     Mechant mechant ;
     mechant.init(5,55) ;
-    
+
     int delay = 200 ;
 
     g.init_game(gr,mechant,perso,delay) ;
