@@ -8,7 +8,7 @@ Mechant::Mechant(std::string nom, int x, int y) :
     y(y)
     {}
 
-Mechant::se_deplace(int dx, int dy){
+void Mechant::se_deplace(int dx, int dy){
     // on entre soit dx soit dy 
     // (se déplace dans une seule direction à la fois)
     if (dy == 0){
@@ -19,3 +19,18 @@ Mechant::se_deplace(int dx, int dy){
     }
 }
 
+void Mechant::pas_alea(){
+    int alea = rand() % 4 ;
+    if (alea == 0){
+        this->se_deplace(1,0) ;
+    }
+    if (alea == 1){
+        this->se_deplace(0,-1) ;
+    }
+    if (alea == 2){
+        this->se_deplace(-1,0) ;
+    }
+    if (alea == 3){
+        this->se_deplace(0,1) ;
+    }
+}
