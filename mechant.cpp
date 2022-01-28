@@ -18,7 +18,7 @@ void Mechant::se_deplace(int dx, int dy){
 }
 
 void Mechant::pas_alea(Grille& grille){
-    int alea = rand() % 4 ;
+    int alea = rand() % 6 ; // 2/3 chances de se déplacer de manière aléatoire
     if (alea == 0){
         // droite
         this->se_deplace(1,0) ;

@@ -13,7 +13,7 @@ int main(){
     perso.init_perso(5,7) ;
 
     Mechant mechant ;
-    mechant.init(5,5) ;
+    mechant.init(5,55) ;
     
     int delay = 200 ;
 
