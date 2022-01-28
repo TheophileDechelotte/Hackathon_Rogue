@@ -2,15 +2,18 @@
 
 #include "grille.h"
 #include "mechant.h"
+#include "perso.h"
 
 class Game
 {
-  Grille Grille;
-  Mechant Mechant;
-  int delay;
+    private:
+    Grille _grille;
+    Mechant _mechant;
+    Perso _perso;
+    int _delay;
   
 public:
-  Game (Grille grille, Mechant Mechant, Perso Perso, int delay=200);
+  Game (int delay=200);
   void play ();
   void sleepOneLap ();
 };
