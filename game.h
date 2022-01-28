@@ -2,6 +2,7 @@
 
 #include "grille.h"
 #include "mechant.h"
+#include "perso.h"
 
 class Game
 {
