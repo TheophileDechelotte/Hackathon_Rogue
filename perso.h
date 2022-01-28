@@ -11,7 +11,7 @@ class Perso{
     public :
         //Perso(int x, int y) ;
         Perso() ;
-        void init_perso(int x, int y)
+        void init_perso(int x, int y) ;
         void add_to_grille(Grille& grille) ;
         void marche(char dir);
         void attrape_cle() ; 

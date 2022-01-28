@@ -24,7 +24,7 @@ void Grille::draw_Grille() {
     // Fonction permettant d'afficher la grille que l'on a construit
     for (int i=0 ; i<grille.size() ; i++) {
         for (int j=0 ; j<grille[1].size() ; j++) {
-            int id = grille[i][j]
+            int id = grille[i][j] ;
             if (id == 1){
                 std::cout << " " ;
             }
