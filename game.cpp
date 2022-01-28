@@ -35,7 +35,7 @@ void Game::play () {
         if (keyEvent()) {
             std::cin >> key;
 
-            if (key == 'q') { // on quite la partie
+            if (key == 'q') { // on quitte la partie
 	            _grille.init_Grille();
 	            std::cout << "see you soon la zone" << std::endl;
 	            exit(1);
