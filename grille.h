@@ -4,11 +4,11 @@
 
 class Grille {
     
-    std::vector <std::vector <char> > grille;
+    std::vector <std::vector <int> > grille;
     
     public : 
 
-    //Grille(const std::vector <std::vector <char> > grille) ;
+    //Grille(const std::vector <std::vector <int> > grille) ;
    Grille() ;
 
     void draw_Grille() ;
@@ -23,7 +23,7 @@ class Grille {
 
     void init_Grille() ;
 
-    void set_Pixel(int x, int y, char c) ;
+    void set_Pixel(int x, int y, int c) ;
 
     int at(int a, int b);
 
