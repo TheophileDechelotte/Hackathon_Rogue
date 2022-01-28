@@ -20,7 +20,7 @@ void Game::init_game(Grille grille, Mechant mechant, Perso perso, int delay){
 
 
 void Game::play () {
-  
+    int vie {5};
     while (true) {
         _grille.init_Grille();
         _mechant.add_to_grille(_grille);
@@ -29,16 +29,6 @@ void Game::play () {
     // mouvement du méchant
     _mechant.pas_alea(_grille) ;
 
-        //si on touche le monstre
-    if(_grille.at(x,y-1)==7 || _grille.at(x,y+1)==7 || _grille.at(x-1,y)==7 || _grille.at(x+1,y)==7){
-        if(_perso.vie() > 1){
-            _perso.vie() = _perso.vie()-1;
-        }
-        else{
-            std::cout << std::endl << "GAME OVER" << std::endl;
-	        exit(1);
-        }
-    }
 
     char key;
     // mouvement du héros

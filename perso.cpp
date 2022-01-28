@@ -44,8 +44,3 @@ void Perso::marche(char dir, Grille& grille){
     }
     
 }
-
-
-int Perso::vie(){
-    return vie;
-}

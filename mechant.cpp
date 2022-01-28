@@ -17,6 +17,7 @@ void Mechant::se_deplace(int dx, int dy){
     y += dy ;
 }
 
+int vie;
 void Mechant::pas_alea(Grille& grille){
     int alea = rand() % 6 ; // 2/3 chances de se déplacer de manière aléatoire
     if (alea == 0){
@@ -47,7 +48,16 @@ void Mechant::pas_alea(Grille& grille){
             this->se_deplace(0,-1) ;
         }
     }
-
+        //si on touche le monstre
+    if(grille.at(x,y-1)==6 || grille.at(x,y+1)==6 || grille.at(x-1,y)==6 || grille.at(x+1,y)==6){
+        if(vie > 1){
+            vie = vie-1;
+        }
+        else{
+            std::cout << std::endl << "GAME OVER" << std::endl;
+	        exit(1);
+        }
+    }
 }
 
 void Mechant::add_to_grille(Grille& grille){

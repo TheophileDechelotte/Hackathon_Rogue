@@ -16,5 +16,4 @@ class Perso{
         void add_to_grille(Grille& grille) ;
         void marche(char dir, Grille& grille);
         void attrape_cle() ;
-        int vie() ; 
 } ;
