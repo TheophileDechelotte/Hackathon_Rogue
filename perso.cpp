@@ -23,15 +23,23 @@ void attrape_cle() {}
 
 void Perso::marche(char dir){
     if(dir == 'k'){
-        x++;
+        if (grille.at(x+1,y)==2 || grille.at(x+1,y)==5){
+            x++;
+        }
     }
     if(dir == 'i'){
-        x = x-1;
+        if (grille.at(x-1,y)==2 || grille.at(x-1,y)==5){
+            x = x-1;
+        }
     }
     if(dir == 'l'){
-        y++;
+        if (grille.at(x,y+1)==2 || grille.at(x,y+1)==5){
+            y++;
+        }
     }
     if(dir == 'j'){
-        y = y-1;
+        if (grille.at(x,y-1)==2 || grille.at(x,y-1)==5){
+            y = y-1;
+        }
     }
 }

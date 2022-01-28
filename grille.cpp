@@ -97,7 +97,7 @@ void Grille::Ground() {
     // Fonction permettant d'ajouter à la grille le sol
 
     for (int i=1 ; i<grille.size()-1 ; i++){
-        for (int j=1 ; j<int(grille[1].size()/3)-1 ; j++) {
+        for (int j=1 ; j<int(grille[1].size()/3) ; j++) {
             grille[i][j] = GROUND ;
         }
         for (int j=int(2*grille[1].size()/3)+1 ; j<grille[1].size()-1 ; j++) {
