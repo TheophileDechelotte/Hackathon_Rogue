@@ -49,3 +49,10 @@ void Mechant::pas_alea(Grille& grille){
 void Mechant::add_to_grille(Grille& grille){
     grille.set_Pixel(x,y,symbole) ;
 }
+
+
+void Mechant::init(int a, int b){
+    symbole = 7;
+    x = a;
+    y = b;
+}
