@@ -25,19 +25,19 @@ void Mechant::se_deplace(int dx, int dy){
 
 void Mechant::pas_alea(Grille& grille){
     int alea = rand() % 4 ;
-    if (alea == 0 && grille[x+1][y] = 2){
+    if (alea == 0 && grille.at(x+1,y) == 2){
         // droite
         this->se_deplace(1,0) ;
     }
-    if (alea == 1 && grille[x][y-1] = 2){
+    if (alea == 1 && grille.at(x,y-1) == 2){
         // bas
         this->se_deplace(0,-1) ;
     }
-    if (alea == 2 && grille[x-1][y] = 2){
+    if (alea == 2 && grille.at(x-1,y) == 2){
         // gauche
         this->se_deplace(-1,0) ;
     }
-    if (alea == 3 && grille[x][y+1] = 2){
+    if (alea == 3 && grille.at(x,y+1) == 2){
         // haut
         this->se_deplace(0,1) ;
     }
@@ -48,4 +48,11 @@ void Mechant::pas_alea(Grille& grille){
 
 void Mechant::add_to_grille(Grille& grille){
     grille.set_Pixel(x,y,symbole) ;
+}
+
+
+void Mechant::init(int a, int b){
+    symbole = 7;
+    x = a;
+    y = b;
 }

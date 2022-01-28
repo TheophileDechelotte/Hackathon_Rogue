@@ -1,4 +1,5 @@
 # pragma once
+# include "grille.h"
 # include <string>
 
 class Perso{

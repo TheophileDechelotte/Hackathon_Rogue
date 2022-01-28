@@ -6,7 +6,7 @@
 class Mechant{
     private :
         std::string nom ;
-        char symbole ;
+        int symbole ;
         int x ;
         int y ;
     public :
@@ -15,5 +15,6 @@ class Mechant{
         void se_deplace(int dx,int dy) ;
         void pas_alea(Grille& grille) ;
         void add_to_grille(Grille& grille) ;
+        void init( int x, int y);
 
 } ;
