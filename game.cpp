@@ -41,7 +41,7 @@ void Game::play () {
 	            exit(1);
             } 
 
-            _perso.marche(key);
+            _perso.marche(key, _grille);
         }
 
         _perso.add_to_grille(_grille);
