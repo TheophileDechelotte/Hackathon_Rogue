@@ -4,6 +4,7 @@
 #include "keyboard_event.h"
 #include "mechant.h"
 #include "grille.h"
+#include "perso.h"
 
 Game::Game(int delay) : delay(200) {}
 
