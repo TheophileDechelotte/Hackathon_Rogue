@@ -1,7 +1,10 @@
-#pragma once
+# pragma once
+# include <string>
 
 class Perso{
     private :
+        std::string nom ;
+        char symbole
         int x ;
         int y ;
         bool key ;

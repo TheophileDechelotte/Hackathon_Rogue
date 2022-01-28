@@ -1,3 +1,4 @@
+# include "grille.h"
 # include <vector>
 # include <string>
 
@@ -9,8 +10,7 @@ class Mechant{
     public :
         Mechant (char nom, int x, int y) ;
         void se_deplace(int dx,int dy) ;
-        void pas_alea() ;
+        void pas_alea(Grille& grille) ;
         void add_to_grille(Grille& grille) ;
-        void est_bloque(Grille& grille) ;
 
 } ;

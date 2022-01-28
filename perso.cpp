@@ -1,7 +1,12 @@
 # include "perso.h"
 #include "grille.h"
 
-    Perso(int x, int y) : x(x), y(y) {}
+    Perso(int x, int y) : 
+    nom ("Maelle")
+    symbole ('@')
+    x(x), 
+    y(y) 
+    {}
 
     void attrape_cle() {}
 
