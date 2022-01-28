@@ -17,6 +17,8 @@ class Grille {
 
     void Corridor() ;
 
+    void Ground() ;
+
     void Doors() ;
 
     void set_Pixel(int x, int y, char c) ;
