@@ -3,7 +3,7 @@
 #include "grille.h"
 
 
-const int LINES = 10;
+const int LINES = 14;
 const int COLUMNS = 60;
 const int BACKGROUND = 1 ;
 const int GROUND = 2 ;
@@ -17,6 +17,7 @@ const int HORIZONTAL_WALL = 4 ;
 //Grille::Grille(const std::vector <std::vector <int> > grille) :
 //grille(grille)
 //{}
+
 
 Grille::Grille()
 {}
