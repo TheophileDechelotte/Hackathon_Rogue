@@ -8,6 +8,6 @@ class Mechant{
         int y ;
     public :
         Mechant (std::string nom, int x, int y) ;
-        void se_deplace() ;
+        void se_deplace(int dx,int dy) ;
 
 } ;
