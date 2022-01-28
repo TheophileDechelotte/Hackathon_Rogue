@@ -13,6 +13,6 @@ class Perso{
         Perso() ;
         void init_perso(int a, int b) ;
         void add_to_grille(Grille& grille) ;
-        void marche(char dir);
+        void marche(char dir, Grille& grille);
         void attrape_cle() ; 
 } ;

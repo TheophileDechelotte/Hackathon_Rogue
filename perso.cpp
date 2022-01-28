@@ -21,7 +21,7 @@ void Perso::add_to_grille(Grille& grille) {
 void attrape_cle() {}
 
 
-void Perso::marche(char dir){
+void Perso::marche(char dir, Grille& grille){
     if(dir == 'k'){
         if (grille.at(x+1,y)==2 || grille.at(x+1,y)==5){
             x++;
