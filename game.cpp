@@ -5,9 +5,10 @@
 #include "mechant.h"
 #include "grille.h"
 
-Game::Game(Grille grille, Mechant Mechant, int delay)
+Game::Game(Grille grille, Mechant Mechant, Perso Perso, int delay)
   : Grille(grille),
   Mechant(Mechant),
+  Perso(Perso),
   delay(delay)
 {}
 
@@ -20,10 +21,14 @@ void Game::play () {
   
   while (true) {
     grille.clear();
-    mechant.addToPlayboard(playboard);
+    mechant.add_to_grille();
+    grille.draw_playground();
+    perso.add_to_grille(grille);
     grille.draw_playground();
     sleepOneLap();
 
+
+// mouvement du héros
     if (keyEvent()) {
       std::cin >> key;
       // la clé key a été pressée
