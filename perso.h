@@ -4,14 +4,14 @@
 
 class Perso{
     private :
-        int symbole ;
-        int x ;
-        int y ;
-        bool key ;
+        int symbole = 6 ;
+        int x = -1 ;
+        int y = -1 ;
+        bool key = false ;
     public :
         //Perso(int x, int y) ;
         Perso() ;
-        void init_perso(int x, int y) ;
+        void init_perso(int a, int b) ;
         void add_to_grille(Grille& grille) ;
         void marche(char dir);
         void attrape_cle() ; 
