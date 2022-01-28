@@ -21,6 +21,8 @@ class Grille {
 
     void Ground() ;
 
+    void init_Grille() ;
+
     void set_Pixel(int x, int y, char c) ;
 
 } ;
