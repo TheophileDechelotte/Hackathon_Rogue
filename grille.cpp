@@ -7,8 +7,10 @@ const int LINES = 10;
 const int COLUMNS = 30;
 const int BACKGROUND = 1 ;
 const int GROUND = 2 ;
-const int CORRIDOR = 3 ;
-const int DOOR = 4 ;
+const int CORRIDOR = 5 ;
+const int VERTICAL_WALL = 3 ;
+const int HORIZONTAL_WALL = 4 ;
+
 
 
 //Grille::Grille(const std::vector <std::vector <int> > grille) :
@@ -33,10 +35,10 @@ void Grille::vertical_Walls() {
 
     
     for (int i=1 ; i<grille.size() ; i++) {
-        grille[i][0] = '|' ;
-        grille[i][int(grille[1].size()/3)] = '|';
-        grille[i][int(2*grille[1].size()/3)] = '|';
-        grille[i][grille[1].size()-1] = '|';
+        grille[i][0] = VERTICAL_WALL ;
+        grille[i][int(grille[1].size()/3)] = VERTICAL_WALL;
+        grille[i][int(2*grille[1].size()/3)] = VERTICAL_WALL;
+        grille[i][grille[1].size()-1] = VERTICAL_WALL;
     }
 }
 
@@ -44,13 +46,13 @@ void Grille::horizontal_Walls() {
     // Fonction permettant d'ajouter à la grille les murs horizontaux
     
     for (int j=0 ; j<int(grille[1].size()/3) ; j++) {
-        grille[0][j] = '_';
-        grille[grille.size()-1][j] = '_';
+        grille[0][j] = HORIZONTAL_WALL;
+        grille[grille.size()-1][j] = HORIZONTAL_WALL;
     }
     
     for (int j=int(2*grille[1].size()/3) ; j<grille[1].size() ; j++) {
-        grille[0][j] = '_';
-        grille[grille.size()-1][j] = '_';
+        grille[0][j] = HORIZONTAL_WALL;
+        grille[grille.size()-1][j] = HORIZONTAL_WALL;
     }
 }
 
