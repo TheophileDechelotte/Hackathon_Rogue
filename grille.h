@@ -4,7 +4,7 @@
 
 class Grille {
     
-    const std::vector <std::vector <char> > grille;
+    std::vector <std::vector <char> > grille;
     
     public : 
 
