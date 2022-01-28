@@ -3,11 +3,12 @@
 #include "grille.h"
 
 
-const int LINES = 10;
-const int COLUMNS = 30;
+const int LINES = 20;
+const int COLUMNS = 60;
 const int BACKGROUND = 1 ;
 const int GROUND = 2 ;
 const int CORRIDOR = 5 ;
+const int DOOR = 6 ;
 const int VERTICAL_WALL = 3 ;
 const int HORIZONTAL_WALL = 4 ;
 
@@ -40,6 +41,9 @@ void Grille::draw_Grille() {
             else if (id == 5){
                 std::cout << "#" ;
             }
+            else if (id == 6){
+                std::cout << "+" ;
+            }
         }
         std::cout << std::endl;
     }
@@ -62,7 +66,7 @@ void Grille::vertical_Walls() {
 void Grille::horizontal_Walls() {
     // Fonction permettant d'ajouter à la grille les murs horizontaux
     
-    for (int j=0 ; j<int(grille[1].size()/3) ; j++) {
+    for (int j=0 ; j<int(grille[1].size()/3)+1 ; j++) {
         grille[0][j] = HORIZONTAL_WALL;
         grille[grille.size()-1][j] = HORIZONTAL_WALL;
     }
@@ -76,9 +80,10 @@ void Grille::horizontal_Walls() {
 void Grille::Corridor() {
     // Fonction permettant d'ajouter à la grille le couloir
 
-    for (int j=int(grille[1].size()/3) ; j<int(2*grille[1].size()/3) ; j++) {
+    for (int j=int(grille[1].size()/3)+1 ; j<int(2*grille[1].size()/3)+1 ; j++) {
         grille[int(grille.size()/2)][j] = CORRIDOR ;
     }
+    grille[int(grille.size()/2)][int(grille[1].size()/3)] = DOOR ;
 }
 
 
@@ -99,8 +104,8 @@ void Grille::init_Grille() {
     // Fonction permettant de reinitialiser/initialiser la grille en ne construisant que le background, le ground, les murs, et le couloir
     grille = std::vector<std::vector<int>> (LINES, std::vector <int> (COLUMNS,BACKGROUND)) ;
     this->Ground();
-    this->vertical_Walls();
     this->horizontal_Walls();
+    this->vertical_Walls();
     this->Corridor();
 }
 
