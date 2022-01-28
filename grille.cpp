@@ -8,7 +8,7 @@ const int COLUMNS = 60;
 const int BACKGROUND = 1 ;
 const int GROUND = 2 ;
 const int CORRIDOR = 5 ;
-const int DOOR = 6 ;
+const int DOOR = 8 ;
 const int VERTICAL_WALL = 3 ;
 const int HORIZONTAL_WALL = 4 ;
 
@@ -42,6 +42,12 @@ void Grille::draw_Grille() {
                 std::cout << "#" ;
             }
             else if (id == 6){
+                std::cout << "@" ;
+            }
+            else if (id == 7){
+                std::cout << "¤" ;
+            }
+            else if (id == 8){
                 std::cout << "+" ;
             }
         }
